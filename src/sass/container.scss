@@ -1,0 +1,51 @@
+/**
+ *
+ * Container Style
+ *
+ * @author Takuto Yanagida
+ * @version 2021-10-30
+ *
+ */
+
+
+@use 'inner';
+
+
+.column-2 {
+	--min-width: 16rem;
+	@include inner.card-n;
+}
+.column-3 {
+	@include inner.card-3-1;
+}
+.column-4 {
+	@include inner.card-4-2-1;
+}
+.column-6 {
+	@include inner.card-6-3-2-1;
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.card-2 {
+	--min-width: 16rem;
+	@include inner.card-n;
+}
+.card-3 {
+	--min-width: 12rem;
+	@include inner.card-n;
+}
+.card-4 {
+	--min-width: 10rem;
+	@include inner.card-n;
+}
+.card-5 {
+	--min-width: 8rem;
+	@include inner.card-n;
+}
+.card-6 {
+	--min-width: 6rem;
+	@include inner.card-n;
+}
