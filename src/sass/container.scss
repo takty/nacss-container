@@ -20,7 +20,7 @@
 
 
 .column-2 {
-	--nc-card-min-width: var(--nc-card-min-width-2);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-2);
 	@include card.card-n;
 }
 
@@ -41,26 +41,26 @@
 
 
 .card-2 {
-	--nc-card-min-width: var(--nc-card-min-width-2);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-2);
 	@include card.card-n;
 }
 
 .card-3 {
-	--nc-card-min-width: var(--nc-card-min-width-3);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-3);
 	@include card.card-n;
 }
 
 .card-4 {
-	--nc-card-min-width: var(--nc-card-min-width-4);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-4);
 	@include card.card-n;
 }
 
 .card-5 {
-	--nc-card-min-width: var(--nc-card-min-width-5);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-5);
 	@include card.card-n;
 }
 
 .card-6 {
-	--nc-card-min-width: var(--nc-card-min-width-6);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-6);
 	@include card.card-n;
 }

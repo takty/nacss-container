@@ -9,19 +9,19 @@
 
 
 @mixin custom-property {
-	--nc-card-row-gap   : 1rem;
-	--nc-card-column-gap: 1rem;
+	--nc-container-card-row-gap   : 1rem;
+	--nc-container-card-column-gap: 1rem;
 
-	--nc-card-min-width-2: 16rem;
-	--nc-card-min-width-3: 12rem;
-	--nc-card-min-width-4: 10rem;
-	--nc-card-min-width-5: 8rem;
-	--nc-card-min-width-6: 6rem;
+	--nc-container-card-min-width-2: 16rem;
+	--nc-container-card-min-width-3: 12rem;
+	--nc-container-card-min-width-4: 10rem;
+	--nc-container-card-min-width-5: 8rem;
+	--nc-container-card-min-width-6: 6rem;
 }
 
 %container {
 	display: grid;
-	gap    : var(--nc-card-row-gap) var(--nc-card-column-gap);
+	gap    : var(--nc-container-card-row-gap) var(--nc-container-card-column-gap);
 
 	> * { margin: 0; }
 }
@@ -31,22 +31,22 @@
 	grid-template-columns: repeat(
 		auto-fit,
 		minmax(
-			var(--nc-card-min-width),
+			var(--nc-container-card-min-width),
 			1fr
 		)
 	);
 }
 
 @mixin card-3-1 {
-	--nc-card-min-width: var(--nc-card-min-width-3, 12rem);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-3, 12rem);
 
 	@extend %container;
 	grid-template-columns: repeat(
 		auto-fit,
 		minmax(
 			clamp(
-				var(--nc-card-min-width),
-				(var(--nc-card-min-width) * 3 + var(--nc-card-column-gap) * 2 - 100%) * 9999,
+				var(--nc-container-card-min-width),
+				(var(--nc-container-card-min-width) * 3 + var(--nc-container-card-column-gap) * 2 - 100%) * 9999,
 				51%
 			),
 			1fr
@@ -55,15 +55,15 @@
 }
 
 @mixin card-4-2-1 {
-	--nc-card-min-width: var(--nc-card-min-width-4, 10rem);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-4, 10rem);
 
 	@extend %container;
 	grid-template-columns: repeat(
 		auto-fit,
 		minmax(
 			clamp(
-				var(--nc-card-min-width),
-				(var(--nc-card-min-width) * 4 + var(--nc-card-column-gap) * 3 - 100%) * 9999,
+				var(--nc-container-card-min-width),
+				(var(--nc-container-card-min-width) * 4 + var(--nc-container-card-column-gap) * 3 - 100%) * 9999,
 				34%
 			),
 			1fr
@@ -72,15 +72,15 @@
 }
 
 @mixin card-6-3-2-1 {
-	--nc-card-min-width: var(--nc-card-min-width-6, 6rem);
+	--nc-container-card-min-width: var(--nc-container-card-min-width-6, 6rem);
 
 	@extend %container;
 	grid-template-columns: repeat(
 		auto-fit,
 		minmax(
 			clamp(
-				var(--nc-card-min-width),
-				(var(--nc-card-min-width) * 6 + var(--nc-card-column-gap) * 5 - 100%) * 9999,
+				var(--nc-container-card-min-width),
+				(var(--nc-container-card-min-width) * 6 + var(--nc-container-card-column-gap) * 5 - 100%) * 9999,
 				26%
 			),
 			1fr
