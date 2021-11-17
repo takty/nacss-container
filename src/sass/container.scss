@@ -1,28 +1,39 @@
 /**
  *
- * Container Style
+ * Container
  *
  * @author Takuto Yanagida
- * @version 2021-10-30
+ * @version 2021-11-17
  *
  */
 
 
-@use 'inner';
+@use 'card';
+
+
+:root {
+	@include card.custom-property;
+}
+
+
+// -----------------------------------------------------------------------------
 
 
 .column-2 {
-	--min-width: 16rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-2);
+	@include card.card-n;
 }
+
 .column-3 {
-	@include inner.card-3-1;
+	@include card.card-3-1;
 }
+
 .column-4 {
-	@include inner.card-4-2-1;
+	@include card.card-4-2-1;
 }
+
 .column-6 {
-	@include inner.card-6-3-2-1;
+	@include card.card-6-3-2-1;
 }
 
 
@@ -30,22 +41,26 @@
 
 
 .card-2 {
-	--min-width: 16rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-2);
+	@include card.card-n;
 }
+
 .card-3 {
-	--min-width: 12rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-3);
+	@include card.card-n;
 }
+
 .card-4 {
-	--min-width: 10rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-4);
+	@include card.card-n;
 }
+
 .card-5 {
-	--min-width: 8rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-5);
+	@include card.card-n;
 }
+
 .card-6 {
-	--min-width: 6rem;
-	@include inner.card-n;
+	--nc-card-min-width: var(--nc-card-min-width-6);
+	@include card.card-n;
 }
