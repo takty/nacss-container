@@ -1,0 +1,42 @@
+/**
+ *
+ * Masonry
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-24
+ *
+ */
+
+
+%masonry {
+	column-width: var(--nc-container-min-width);
+	column-gap  : var(--nc-container-column-gap);
+
+	> * {
+		box-sizing  : border-box;
+		break-inside: avoid;
+	}
+	// For not Safari
+	@supports not (font: -apple-system-body) {
+		> * + * { margin-top: var(--nc-container-row-gap); }
+	}
+	// For Safari
+	@supports (font: -apple-system-body) {
+		> * {
+			display: inline-block;
+			width  : 100%;
+		}
+		&::after {
+			content      : '';
+			display      : block;
+			width        : 100%;
+			margin-bottom: calc(-1 * var(--nc-container-row-gap));
+			column-span  : all;
+		}
+		> * { margin-bottom: var(--nc-container-row-gap); }
+	}
+}
+
+@mixin masonry-n {
+	@extend %masonry;
+}
