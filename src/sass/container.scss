@@ -3,16 +3,18 @@
  * Container
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-11-24
  *
  */
 
 
+@use 'common';
 @use 'card';
+@use 'masonry';
 
 
 :root {
-	@include card.custom-property;
+	@include common.custom-property;
 }
 
 
@@ -20,7 +22,7 @@
 
 
 .column-2 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-2);
+	--nc-container-min-width: var(--nc-container-min-width-2);
 	@include card.card-n;
 }
 
@@ -40,27 +42,81 @@
 // -----------------------------------------------------------------------------
 
 
+.column-2-1 {
+	--nc-container-min-width: var(--nc-container-min-width-2);
+	@include card.card-n;
+}
+
+.column-3-1 {
+	@include card.card-3-1;
+}
+
+.column-4-1 {
+	@include card.card-4-1;
+}
+
+.column-5-1 {
+	@include card.card-5-1;
+}
+
+.column-6-1 {
+	@include card.card-6-1;
+}
+
+
+// -----------------------------------------------------------------------------
+
+
 .card-2 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-2);
+	--nc-container-min-width: var(--nc-container-min-width-2);
 	@include card.card-n;
 }
 
 .card-3 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-3);
+	--nc-container-min-width: var(--nc-container-min-width-3);
 	@include card.card-n;
 }
 
 .card-4 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-4);
+	--nc-container-min-width: var(--nc-container-min-width-4);
 	@include card.card-n;
 }
 
 .card-5 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-5);
+	--nc-container-min-width: var(--nc-container-min-width-5);
 	@include card.card-n;
 }
 
 .card-6 {
-	--nc-container-card-min-width: var(--nc-container-card-min-width-6);
+	--nc-container-min-width: var(--nc-container-min-width-6);
 	@include card.card-n;
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.masonry-2 {
+	--nc-container-min-width: var(--nc-container-min-width-2);
+	@include masonry.masonry-n;
+}
+
+.masonry-3 {
+	--nc-container-min-width: var(--nc-container-min-width-3);
+	@include masonry.masonry-n;
+}
+
+.masonry-4 {
+	--nc-container-min-width: var(--nc-container-min-width-4);
+	@include masonry.masonry-n;
+}
+
+.masonry-5 {
+	--nc-container-min-width: var(--nc-container-min-width-5);
+	@include masonry.masonry-n;
+}
+
+.masonry-6 {
+	--nc-container-min-width: var(--nc-container-min-width-6);
+	@include masonry.masonry-n;
 }
