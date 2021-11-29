@@ -3,7 +3,7 @@
  * Masonry
  *
  * @author Takuto Yanagida
- * @version 2021-11-24
+ * @version 2021-11-29
  *
  */
 
@@ -18,7 +18,9 @@
 	}
 	// For not Safari
 	@supports not (font: -apple-system-body) {
-		> * + * { margin-top: var(--nc-container-row-gap); }
+		> * + * {
+			margin-block-start: var(--nc-container-row-gap);
+		}
 	}
 	// For Safari
 	@supports (font: -apple-system-body) {
@@ -27,13 +29,15 @@
 			width  : 100%;
 		}
 		&::after {
-			content      : '';
-			display      : block;
-			width        : 100%;
-			margin-bottom: calc(-1 * var(--nc-container-row-gap));
-			column-span  : all;
+			content         : '';
+			display         : block;
+			width           : 100%;
+			margin-block-end: calc(-1 * var(--nc-container-row-gap));
+			column-span     : all;
 		}
-		> * { margin-bottom: var(--nc-container-row-gap); }
+		> * {
+			margin-block-end: var(--nc-container-row-gap);
+		}
 	}
 }
 
