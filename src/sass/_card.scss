@@ -3,7 +3,7 @@
  * Card
  *
  * @author Takuto Yanagida
- * @version 2021-11-25
+ * @version 2021-12-20
  *
  */
 
@@ -18,7 +18,7 @@
 %card-n {
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			var(--nc-container-min-width),
 			1fr
@@ -35,7 +35,7 @@
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -52,7 +52,7 @@
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -69,7 +69,7 @@
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -86,7 +86,7 @@
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -103,7 +103,7 @@
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -116,11 +116,11 @@
 }
 
 @mixin card-6-1 {
-	--nc-container-min-width: var(--nc-container-min-width-6, 6rem);
+	--nc-container-min-width: var(--nc-container-min-width-6, 7rem);
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
@@ -133,11 +133,11 @@
 }
 
 @mixin card-6-3-2-1 {
-	--nc-container-min-width: var(--nc-container-min-width-6, 6rem);
+	--nc-container-min-width: var(--nc-container-min-width-6, 7rem);
 
 	@extend %card;
 	grid-template-columns: repeat(
-		auto-fit,
+		auto-fill,
 		minmax(
 			clamp(
 				var(--nc-container-min-width),
