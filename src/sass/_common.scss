@@ -3,12 +3,12 @@
  * Common
  *
  * @author Takuto Yanagida
- * @version 2021-12-20
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property {
 	--nc-container-row-gap   : 1rem;
 	--nc-container-column-gap: 1rem;
 
