@@ -13,7 +13,6 @@
 	column-gap  : var(--nc-container-column-gap);
 
 	> * {
-		box-sizing  : border-box;  // For reset
 		break-inside: avoid;
 	}
 	// For not Safari
