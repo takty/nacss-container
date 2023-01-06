@@ -1,12 +1,9 @@
 /**
- *
  * Style for Document
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
- *
+ * @version 2023-01-05
  */
-
 
 *,
 ::before,
@@ -43,15 +40,27 @@ main {
 	margin-block-start: 2rem;
 }
 
+img {
+	width : 100%;
+	height: auto;
+
+	display: grid;
+}
+
 
 // -----------------------------------------------------------------------------
 
 
 *[class^='column-'],
 *[class^='card-'],
+*[class^='fence-'],
 *[class^='masonry-'] {
 	> *:not(:empty) {
 		background-color: rgba(red, 0.5);
 		border          : 4px solid pink;
+
+		p {
+			margin-block: 0;
+		}
 	}
 }
