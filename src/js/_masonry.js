@@ -2,7 +2,7 @@
  * Masonry
  *
  * @author Takuto Yanagida
- * @version 2023-01-05
+ * @version 2023-03-21
  */
 
 function apply(ts) {
@@ -73,11 +73,21 @@ class Masonry {
 			const r = it.getBoundingClientRect();
 			if (!r.width && !r.height) continue;
 
-			const i = ys.indexOf(Math.min(...ys));
+			const i = ys.indexOf(this.#min(ys, gy * 2));
 			it.style.translate = `${xs[i]}px ${0 | ys[i]}px`;
 			ys[i] += r.height + gy;
 		}
 		this.#cont.style.height = `${Math.max(0, Math.ceil(Math.max(...ys) - gy))}px`;
+	}
+
+	#min(ys, f) {
+		let v = ys[0];
+		for (let i = 1; i < ys.length; i += 1) {
+			if (ys[i] + f < v) {
+				v = ys[i];
+			}
+		}
+		return v;
 	}
 
 	#getBaseSize() {
